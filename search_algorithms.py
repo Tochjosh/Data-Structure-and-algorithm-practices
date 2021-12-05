@@ -158,3 +158,26 @@ def fib(num):
         second = fb
 
     return False
+
+
+def rotate(string1, string2):
+
+    """
+
+    :param string1: a given string
+    :param string2: a supposed rotated string of the first string1
+    :return: integer 0 if no rotation (i.e both string are the same), -1 if string2 is not a possible rotation
+                of string1 or the number of rotations.
+    """
+    if string1 == string2:
+        return 0
+
+    for i in range(len(string1)):
+        beginning = string1[len(string1) - i:]
+        end = string1[:len(string1) - i]
+        result = beginning + end
+        if result == string2:
+            return i
+
+    return -1
+
