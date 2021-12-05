@@ -122,4 +122,39 @@ def rate():
         print(rated_movie)
 
 
-rate()
+# rate()
+
+def array_challenge(arr):
+    lis1 = [x for x in range(arr[0], arr[1] + 1)]
+    lis2 = [x for x in range(arr[2], arr[3] + 1)]
+    length = arr[-1]
+    intersect = []
+
+    for i in lis1:
+        if i in lis2:
+            intersect.append(i)
+
+    if len(intersect) >= length:
+        return True
+    return False
+
+
+def fib(num):
+    """
+    a function that checks if a number is in the fibonacci sequence
+    :param num: a positive integer
+    :return: boolean
+    """
+
+    first = 0
+    second = 1
+    fb = 0
+
+    while fb <= num:
+        if fb == num:
+            return True
+        fb = first + second
+        first = second
+        second = fb
+
+    return False
