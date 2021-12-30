@@ -181,39 +181,6 @@ def rotate(string1, string2):
     return -1
 
 
-def mod(A, M):
-    count = 0
-    rev = A[::-1]
-
-    for i in range(len(A)):
-
-        if abs(A[i] - rev[i]) % M == 0:
-            count += 1
-    return count + 1
-
-
-# print(mod([7, 1, 11, 8, 4, 10], 8))
-
-
-#
-#     rev = arr[::-1]
-#
-#     for i in arr:
-#         for j in arr:
-#             if arr.index(j) == arr.index(i):
-#                 continue
-#             if not arr[arr.index(j)+1]:
-#                 continue
-#             if arr[arr.index(j)+1] < j:
-#                 continue
-#             if arr[arr.index(j) + 1] and arr[arr.index(j) + 1] > j:
-#
-#
-#
-#
-#
-# print(dist([1, 5, 5, 2, 6]))
-
 def linear_search(char, string):
     linear = 1
     for i in string:
@@ -247,4 +214,4 @@ def binary_search(char, string):
 
 print(binary_search('q', "acefhglmoqr"))
 
-print(binary_search( "z", "abcdef"))
+print(binary_search("z", "abcdef"))
