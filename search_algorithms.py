@@ -182,6 +182,11 @@ def rotate(string1, string2):
 
 
 def linear_search(char, string):
+    """
+    :param char: a single character to search for
+    :param string: a string from which to search
+    :return: a list of index of the character in the string and the number of checks done
+    """
     linear = 1
     for i in string:
         if i == char:
@@ -191,6 +196,11 @@ def linear_search(char, string):
 
 
 def binary_search(char, string):
+    """
+       :param char: a single character to search for
+       :param string: a string from which to search
+       :return: a list of index of the character in the string and the number of checks done
+       """
     if char not in string:
         return -1
     binary = 0
@@ -209,9 +219,11 @@ def binary_search(char, string):
             sort_str = start_bsearch
             binary += 1
 
+    return -1
 
-# print(linear_search('q', "acefhglmoqr"))
+
+print(linear_search('m', "acefhglmoqr"))
 
 print(binary_search('q', "acefhglmoqr"))
 
-print(binary_search("z", "abcdef"))
+print(binary_search("d", "abcdefh"))
