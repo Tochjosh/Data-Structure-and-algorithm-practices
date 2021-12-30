@@ -28,3 +28,4 @@ def organize_photos(directory):
 
 if __name__ == '__main__':
     organize_photos("/Users/decagon/data_structure_and_algo/Photos")
+

@@ -161,7 +161,6 @@ def fib(num):
 
 
 def rotate(string1, string2):
-
     """
 
     :param string1: a given string
@@ -181,3 +180,71 @@ def rotate(string1, string2):
 
     return -1
 
+
+def mod(A, M):
+    count = 0
+    rev = A[::-1]
+
+    for i in range(len(A)):
+
+        if abs(A[i] - rev[i]) % M == 0:
+            count += 1
+    return count + 1
+
+
+# print(mod([7, 1, 11, 8, 4, 10], 8))
+
+
+#
+#     rev = arr[::-1]
+#
+#     for i in arr:
+#         for j in arr:
+#             if arr.index(j) == arr.index(i):
+#                 continue
+#             if not arr[arr.index(j)+1]:
+#                 continue
+#             if arr[arr.index(j)+1] < j:
+#                 continue
+#             if arr[arr.index(j) + 1] and arr[arr.index(j) + 1] > j:
+#
+#
+#
+#
+#
+# print(dist([1, 5, 5, 2, 6]))
+
+def linear_search(char, string):
+    linear = 1
+    for i in string:
+        if i == char:
+            return [string.index(char), linear]
+        linear += 1
+    return -1
+
+
+def binary_search(char, string):
+    if char not in string:
+        return -1
+    binary = 0
+    sort_str = sorted(string)
+    while len(sort_str) > 0:
+        end_bsearch = sort_str[:len(sort_str) // 2]
+        start_bsearch = sort_str[len(sort_str) // 2:]
+        half_way = sort_str[len(sort_str) // 2]
+        if char == half_way:
+            binary += 1
+            return [string.index(char), binary]
+        if char in end_bsearch:
+            sort_str = end_bsearch
+            binary += 1
+        if char in start_bsearch:
+            sort_str = start_bsearch
+            binary += 1
+
+
+# print(linear_search('q', "acefhglmoqr"))
+
+print(binary_search('q', "acefhglmoqr"))
+
+print(binary_search( "z", "abcdef"))
